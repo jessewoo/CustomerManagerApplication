@@ -1,4 +1,5 @@
-﻿'use strict';
+﻿// Custom filters
+'use strict';
 
 define(['app'], function (app) {
 

@@ -1,4 +1,5 @@
-﻿define([], function () {
+﻿// Custom animations using the GreenSock library
+define([], function () {
 
     var wcAnimations = function () {
         var duration = 0.5;

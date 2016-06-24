@@ -1,4 +1,5 @@
-﻿'use strict';
+﻿// Using Breeze to retrieve and work with data
+'use strict';
 
 define(['app'], function (app) {
 

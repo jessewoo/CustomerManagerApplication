@@ -35,6 +35,9 @@ define(['app'], function (app) {
             }
         };
 
+
+        // Next you’ll need to define the modal options that you’d like to use for the header text, body text, and button text. Once the options are defined you can call the modalService’s showModal() function as shown next.
+
         vm.deleteCustomer = function () {
             var custName = vm.customer.firstName + ' ' + vm.customer.lastName;
             var modalOptions = {
@@ -44,6 +47,8 @@ define(['app'], function (app) {
                 bodyText: 'Are you sure you want to delete this customer?'
             };
 
+            // If the user cancels the dialog it’ll disappear automatically. If they click the “OK” button (or whatever text you gave the button) you can process the request. In this example, the code deletes a customer by making a call to a dataService factory.
+            
             modalService.showModal({}, modalOptions).then(function (result) {
                 if (result === 'ok') {
                     dataService.deleteCustomer(vm.customer.id).then(function () {

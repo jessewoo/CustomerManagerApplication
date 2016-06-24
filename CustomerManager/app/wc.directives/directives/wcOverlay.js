@@ -1,3 +1,4 @@
+// Intercepting HTTP requests to display a custom overlay during Ajax calls
 (function () {
 
     var injectParams = ['$q', '$timeout', '$window', 'httpInterceptor'];
@@ -16,6 +17,7 @@
                     timerPromiseHide = null,
                     queue = [];
 
+                // Initialization
                 init();
 
                 function init() {

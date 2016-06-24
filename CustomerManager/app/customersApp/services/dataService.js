@@ -1,4 +1,5 @@
-﻿'use strict';
+﻿// Using factories and services as re-useable data services
+'use strict';
 
 define(['app', 'customersApp/services/customersBreezeService',
         'customersApp/services/customersService'], function (app) {

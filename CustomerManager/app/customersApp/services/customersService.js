@@ -1,4 +1,5 @@
-﻿'use strict';
+﻿// Making AJAX calls using a Factory
+'use strict';
 
 define(['app'], function (app) {
 

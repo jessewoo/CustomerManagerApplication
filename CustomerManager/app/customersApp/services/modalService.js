@@ -1,4 +1,6 @@
-﻿"use strict";
+﻿// Showing custom modal dialogs with a re-useable service
+// http://weblogs.asp.net/dwahlin/building-an-angularjs-modal-service
+"use strict";
 
 define(['app'], function (app) {
 
@@ -20,12 +22,14 @@ define(['app'], function (app) {
             bodyText: 'Perform this action?'
         };
 
+        // sets the backdrop property to “static” so that it won’t go away when the user clicks on it
         this.showModal = function (customModalDefaults, customModalOptions) {
             if (!customModalDefaults) customModalDefaults = {};
             customModalDefaults.backdrop = 'static';
             return this.show(customModalDefaults, customModalOptions);
         };
 
+        // It then calls show() which applies values that are supplied to the $modal service.
         this.show = function (customModalDefaults, customModalOptions) {
             //Create temp objects to work with since we're in a singleton service
             var tempModalDefaults = {};
@@ -51,6 +55,7 @@ define(['app'], function (app) {
                 tempModalDefaults.controller.$inject = ['$scope', '$modalInstance'];
             }
 
+            // The call to open() at the bottom of modalService handles displaying the modal dialog.
             return $modal.open(tempModalDefaults).result;
         };
     };

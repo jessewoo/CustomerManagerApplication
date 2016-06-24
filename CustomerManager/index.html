@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<!-- The  homepage is index.html and is located at the root of the application folder. -->
+<!DOCTYPE html>
 <html>
 <head>
     <title>Customer Manager</title>
@@ -38,24 +39,26 @@
                     </li>
                 </ul>
 
-                <!-- Without menu-highlighter directive -->
-                <!--<ul class="nav navbar-nav nav-pills navBarPadding">
-                    <li data-ng-class="{'active':highlight('/customers')}"><a href="#/customers">Customers</a></li>
-                    <li data-ng-class="{'active':highlight('/orders')}"><a href="#/orders">Orders</a></li>
-                    <li data-ng-class="{'active':highlight('/about')}"><a href="#/about">About</a></li>
-                    <li data-ng-class="{'active':highlight('/login')}" id="nav-login"
-                        data-ng-click="loginOrOut()">
-                        <a>{{ loginLogoutText }}</a>
-                    </li>
-                </ul>-->
             </div>
         </nav>
     </header>
 
+    <!-- This is where the partial views will go -->
+    <!-- defines where application views will be loaded using the ng-view directive -->
     <div class="slide-animation-container">
         <div data-ng-view id="ng-view" class="slide-animation"></div>
     </div>
-    
+
+    <div class="well">
+        <div class="container">
+            <ul>
+                <li>Add in functionality to add customers</li>
+                <li>Add in functionality to add and edit products to customers</li>
+                <li>Orders, it's currently just products - 1 to 1 product = order</li>
+                <li>Currently filter only what's on the page, not everything</li>
+            </ul>
+        </div>
+    </div>
     <div id="footer">
         <div class="navbar navbar-fixed-bottom">
             <div class="navbar-inner footer">
@@ -63,7 +66,7 @@
                     <footer>
                         <div class="row">
                             <div class="col-md-12">
-                                Created by <a href="http://twitter.com/DanWahlin" target="_blank">Dan Wahlin</a>
+                                Created by <a href="http://twitter.com/DanWahlin" target="_blank">Dan Wahlin</a> Edited by Jesse Woo
                             </div>
                         </div>
                     </footer>
@@ -76,6 +79,7 @@
         <br /><img src="Content/images/spinner.gif" />&nbsp;&nbsp;Loading
     </div>
 
+    <!-- includes script references to AngularJS, AngularJS routing and animation scripts, plus a few others located in the Scripts folder and to custom application scripts located in the app folder. -->
     <!-- 3rd party libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>

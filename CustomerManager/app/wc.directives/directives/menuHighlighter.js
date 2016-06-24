@@ -1,4 +1,5 @@
-﻿/*
+﻿// Creating custom directives
+/*
     Thanks to Karl-Gustav for creating the autoActive directive 
     to simplify highlighting <li> elements in a menu based on the path
     View the original version of the autoActive directive at 

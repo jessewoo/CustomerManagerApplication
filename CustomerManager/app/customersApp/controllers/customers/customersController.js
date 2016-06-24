@@ -1,4 +1,6 @@
-﻿'use strict';
+﻿// Custom paging - Individual Features are identified. Convention- Categorization
+// Segregate by module / convention / feature
+'use strict';
 
 define(['app'], function (app) {
 
