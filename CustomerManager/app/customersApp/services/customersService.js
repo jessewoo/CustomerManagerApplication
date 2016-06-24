@@ -24,6 +24,7 @@ define(['app'], function (app) {
                 });
         };
 
+        // Makes an Ajax call back to server - from server.js > api.js
         factory.checkUniqueValue = function (id, property, value) {
             if (!id) id = 0;
             return $http.get(serviceBase + 'checkUnique/' + id + '?property=' + property + '&value=' + escape(value)).then(

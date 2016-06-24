@@ -68,6 +68,11 @@
                     <div class="col-md-10">
                         <!-- allowInvalid added below so that the model isn't wiped
                         out (the default behavior) if email is determined to be invalid due to being a duplicate-->
+
+                        <!-- Directive in controlling checking for unique value -->
+                        <!-- Code starts off by binding to the blur event of hte element -->
+                        <!-- Unique key for the customer object - exclude the current customer when checking for a unique value across customer
+                        Property = name of the customer object property that should be checked for uniqueness by backend system -->
                         <input type="text" name="email"
                                class="form-control"
                                data-ng-model="vm.customer.email"
