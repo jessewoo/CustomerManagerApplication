@@ -5,6 +5,7 @@ define(['app'], function (app) {
 
     var injectParams = ['$http', '$q'];
 
+    // Factory that creates an object that handles making calls to the server
     var customersFactory = function ($http, $q) {
         var serviceBase = '/api/dataservice/',
             factory = {};

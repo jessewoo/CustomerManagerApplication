@@ -1,6 +1,10 @@
 var db = require('../accessDB')
   , util = require('util');
 
+
+// Include methods to handle GET, PUT, POST and DELETE operations
+// Relies on a repository object behind the scene to handle interacting with the actual data source
+
 // GET
 
 exports.customer = function (req, res) {

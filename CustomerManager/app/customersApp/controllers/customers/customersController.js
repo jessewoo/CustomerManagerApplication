@@ -4,6 +4,11 @@
 
 define(['app'], function (app) {
 
+
+    // Factory (customersService.js) is created, a controller can be used to make calls to the API service
+    // Relies on the dataFactory for data retrieval and manipulation.
+    // All the dataFactory functions return a PROMISE which is resolved by the controller using the then() function
+    // Once data is returned from the facotry, the $scope is updated which will drive hte user interface
     var injectParams = ['$location', '$filter', '$window',
                         '$timeout', 'authService', 'dataService', 'modalService'];
 
